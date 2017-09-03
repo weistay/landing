@@ -7,7 +7,7 @@ import router from './router'
 // Require the main Sass manifest file
 require('./assets/sass/main.scss')
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 /* eslint-disable no-new */
 new Vue({
