@@ -18,7 +18,7 @@
                         <input class="input is-large" type="text" placeholder="@ Subscribe for updates">
                       </div>
                       <div class="control">
-                        <a class="button is-large"><span class="icon"><i class="fa fa-arrow-right"></i></span></a>
+                        <a class="button is-large"><span class="icon"><icon class="fa fa-arrow-right"></icon></span></a>
                       </div>
                       <div class="line-art">
                         <img src="/static/images/landing-line-art.svg" class="line-art-top">
@@ -29,16 +29,16 @@
                   <div class="social">
                     <div class="columns is-mobile">
                       <div class="column">
-                        <a href=""><i class="fa fa-slack"></i></a>
+                        <a href=""><icon class="fa fa-slack"></icon></a>
                       </div>
                       <div class="column">
-                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><icon class="fa fa-twitter"></icon></a>
                       </div>
                       <div class="column">
-                        <a href=""><i class="fa fa-github"></i></a>
+                        <a href=""><icon class="fa fa-github"></icon></a>
                       </div>
                       <div class="column">
-                        <a href=""><i class="fa fa-medium"></i></a>
+                        <a href=""><icon class="fa fa-medium"></icon></a>
                       </div>
                     </div>
                   </div>

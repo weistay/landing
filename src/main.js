@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import VueHead from 'vue-head'
 import VueScrollTo from 'vue-scrollto'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
 
 // Require the main Sass manifest file
 require('./assets/sass/main.scss')
@@ -19,5 +21,5 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App, Icon }
 })
