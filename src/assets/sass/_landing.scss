@@ -1,4 +1,6 @@
 .landing {
+  position: relative;
+  z-index: 10;
   .nav {
     padding: 0 2.5rem 0 3.25rem;
     width: 100%;
@@ -269,16 +271,22 @@
           width:100%;
         }
         a {
-          @include rounded(50%);
-          background: $brand-color-3;
-          padding: 12px;
+          text-align: center;
+          float: left;
+          width: 50px;
+          height: 50px;
+          border: 3px solid $brand-color-3;
+          @include rounded(100%);
           .fa {
-            vertical-align: middle;
-            color:white;
-            padding-bottom: 3px;
+            font-size: 20px;
+            line-height: 45.5px;
+            color: $brand-color-3;
           }
           &:hover {
-            background-color: $brand-color-1;
+            background-color: $brand-color-3;
+            .fa {
+              color: white;
+            }
           }
         }
       }
@@ -289,43 +297,202 @@
 .how {
   background-color: darken($brand-color-3, 10%);
   position: relative;
+  z-index: 9;
   &:after {
     @include content-full();
     background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
     opacity: 0.1;
+    pointer-events: none;
     @include box-shadow(1px, 1px, 80px, rgba(0,0,0,1), true);
   }
-
-  .property {
-    width: 500px;
+  .hero-body {
+    padding: 6rem 1.5rem;
+  }
+  .section-title {
+    margin-bottom: 2.5rem;
+  }
+  .property-wrap {
+    margin: auto;
     position: relative;
-    background-color: white;
-    @include rounded(5px);
-    @include box-shadow(3px, 3px, 60px, rgba(0,0,0,0.25));
-    .photo {
+    width: 500px;
+    @include until($desktop) {
+      width: 97%;
+    }
+    .property {
       position: relative;
-      background-size:cover;
-      background-repeat: no-repeat;
-      height: 400px;
-      .img-meta {
-        position: absolute;
-        bottom: 0;
-        left:0;
-        width: 100%;
-        @include gradient(rgba(0,0,0,0), rgba(0,0,0,0.75), true);
-        color:white;
-        font-weight: 600;
-        abbr {
-          vertical-align: super;
-          font-size: 85%;
+      background-color: white;
+      @include rounded(5px);
+      @include box-shadow(3px, 3px, 60px, rgba(0,0,0,0.25));
+      @include until($desktop) {
+        margin-bottom: 1.5rem;
+      }
+      .photo {
+        position: relative;
+        background-size:cover;
+        background-repeat: no-repeat;
+        height: 400px;
+        .img-meta {
+          position: absolute;
+          bottom: 0;
+          left:0;
+          width: 100%;
+          @include gradient(rgba(0,0,0,0), rgba(0,0,0,0.75), true);
+          color:white;
+          font-weight: 600;
+          font-size: 1.5rem;
+          @include until($desktop) {
+            font-size: 1rem;
+          }
+          abbr {
+            vertical-align: super;
+            font-size: 75%;
+          }
+          .columns {
+            padding: 1rem;
+          }
+          .price {
+            span {
+              opacity: 0.5;
+              font-size: 65%;
+            }
+          }
         }
-        .columns {
+      }
+      .meta {
+        //padding: 1rem;
+        .property-name {
+          //margin-bottom: $margin-amount / 2;
           padding: 1rem;
+        }
+        .property-description {
+          padding: 0 1rem;
+          margin-bottom: 1rem;
+        }
+        .property-tags {
+          padding: 1rem 1rem 0.5rem 1rem;
+          background:hsl(0, 0%, 93%);
+          .property-tags-title {
+            font-weight: 600;
+          }
+          .tag {
+            background-color: white;
+          }
+          .tag.is-primary {
+            background-color: $brand-color-1;
+          }
+        }
+        .action {
+          padding: 1rem;
+        }
+        .scarce {
+          @include until($tablet) {
+            text-align: left!important;
+          }
+          span {
+            font-weight: 600;
+          }
+          .spaces {
+            span {
+              color: $brand-color-2;
+            }
+          }
+          .time {
+            span {
+              color: $brand-color-1;
+            }
+          }
         }
       }
     }
-    .meta {
-      padding: 1rem;
+    .pt {
+      position: absolute;
+      @include until($desktop) {
+        position: relative;
+        margin-top: 0.5rem;
+      }
+      .pt-tip {
+        flex: 0 0 200px;
+        @include until($desktop) {
+          flex: 100%;
+        }
+        .pt-title {
+          color: $brand-color-1;
+          font-weight: 600;
+        }
+        p {
+          color: rgba(255, 255, 255, 0.8);
+          a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: underline;
+          }
+        }
+      }
+      .line {
+        position: relative;
+        @include until($desktop) {
+          display: none;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top:50%;
+          left:0;
+          width: 100%;
+          height: 3px;
+          background-color: $brand-color-1;
+        }
+      }
+    }
+    .pt-left {
+      text-align: left;
+      left: -250px;
+      @include until($desktop) {
+        left: auto;
+        top: 0!important;
+        right: 0!important;
+        width: 100%!important;
+      }
+    }
+    .pt-right {
+      text-align: right;
+      right: -250px;
+      @include until($desktop) {
+        right: auto;
+        text-align: left;
+        top: 0!important;
+        left: 0!important;
+        width: 100%!important;
+      }
+    }
+    .pt-1 {
+      //left: -250px;
+      top: 20px;
+      width: 300px;
+    }
+    .pt-2 {
+      //left: -250px;
+      top: 330px;
+      width: 246px;
+    }
+    .pt-3 {
+      //right: -250px;
+      top: 306px;
+      width: 300px;
+    }
+    .pt-4 {
+      //right: -250px;
+      top: 515px;
+      width: 270px;
+    }
+    .pt-5 {
+      //left: -250px;
+      top: 624px;
+      width: 248px;
+    }
+    .pt-6 {
+      //right: -250px;
+      top: 634px;
+      width: 249px;
     }
   }
 }

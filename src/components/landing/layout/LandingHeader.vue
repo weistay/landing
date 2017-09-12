@@ -16,7 +16,7 @@
       <a class="nav-item">
         Home
       </a>
-      <a class="nav-item">
+      <a v-scroll-to="'#how'" class="nav-item">
         How it works
       </a>
       <a class="nav-item">
