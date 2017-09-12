@@ -1,0 +1,331 @@
+.landing {
+  .nav {
+    padding: 0 2.5rem 0 3.25rem;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 2.75rem;
+
+    @include mobile() {
+      padding: 0 1rem;
+      top:0;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      position: relative;
+    }
+
+    .nav-left, .nav-right {
+      flex-basis: auto;
+    }
+
+    .nav-toggle {
+      @include mobile() {
+        margin-right:1rem;
+      }
+    }
+    .nav-left {
+      .nav-item {
+        padding-left: 0;
+        padding-right: 0;
+        img {
+          max-height: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .right-side {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    @include gradient-diagonal($background-light, darken($background-light, 10%)); //#38dbd1
+
+    @include mobile() {
+      display: none;
+    }
+
+    .overlay {
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      width: 100%;
+      z-index: 4;
+      opacity: 0.25;
+      pointer-events: none;
+      background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
+    }
+
+    .wt {
+      z-index: 2;
+      position: absolute;
+      display: flex;
+      top:3.6rem;
+      left:3rem;
+      .wt-logo {
+        padding: 0;
+        flex:none;
+        width: 32px;
+        height: 50px;
+        img {
+          height: 50px;
+        }
+      }
+      .wt-text {
+        span {
+          background: rgba(0,0,0,0.65);
+          color: white;
+          padding: 3px 4px;
+        }
+        @include tablet-only() {
+          display: none;
+        }
+      }
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .left-side {
+    position: relative;
+    padding-bottom: 0;
+    margin: 0;
+    background-color: white;
+
+
+    @include fullhd() {
+      width: 41%;
+    }
+
+    @include widescreen-only() {
+      width: 50%;
+    }
+
+    @include desktop-only() {
+      width: 50%;
+    }
+
+    @include tablet-only() {
+      width: 80%;
+    }
+
+    @include mobile() {
+      width: 100%;
+    }
+
+    .hero-body {
+      padding: 2rem;
+      @include mobile() {
+        padding: 1rem;
+      }
+      .container {
+        margin-top: 4rem;
+        @include mobile() {
+          margin-top: 0;
+        }
+        @include tablet-only() {
+          margin-top: 8rem;
+        }
+      }
+      .scroll-down {
+        padding: 0 2.75rem;
+        position: absolute;
+        bottom: 2.75rem;
+        left: 12px;
+        display: none;
+        a {
+          font-weight: 600;
+        }
+        @include desktop() {
+          display: block;
+        }
+      }
+    }
+
+    .title, .subtitle {
+      margin-bottom: 3rem;
+    }
+
+    .action {
+      position: relative;
+      width: 130%;
+      z-index: 5;
+
+      @include tablet-only() {
+        padding-bottom: 50%;
+      }
+
+      @include mobile() {
+        width: 100%;
+        padding-bottom: 60%;
+      }
+
+      .field {
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+        border: 3px solid $brand-color-3!important;
+
+        .control {
+          margin-right: 0!important;
+          &:first-child {
+            width: 110%;
+          }
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 300px;
+          background-color: $brand-color-3;
+          top: 50%;
+          left: -300px;
+          @include mobile() {
+            width: 2000px;
+          }
+          @include tablet-only {
+            width: 2000px;
+          }
+        }
+      }
+
+      .line-art {
+        position: absolute;
+        max-width: 200%;
+        bottom: 22px;
+        pointer-events: none;
+
+        .line-art-bottom {
+          position: relative;
+        }
+
+        .line-art-top {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+          z-index:3;
+        }
+
+        @include fullhd() {
+          width: 180%;
+          left: 55.4%;
+        }
+
+        @include widescreen-only() {
+          width: 140%;
+          left: 63%;
+        }
+
+        @include desktop-only() {
+          width: 140%;
+          left: 63%;
+        }
+
+        @include tablet-only() {
+          width: 140%;
+          left: -30%;
+          bottom: auto;
+          top:37px;
+        }
+
+        @include mobile() {
+          width: 200%;
+          left: -62.5%;
+          bottom: auto;
+          top:37px;
+        }
+      }
+
+      .input.is-large, .button.is-large {
+        font-size: 2rem;
+        border:none;
+        z-index: 1;
+
+        @include mobile() {
+          font-size: 1.35rem;
+        }
+      }
+
+      .button {
+        &:hover {
+          background-color: $brand-color-2;
+          color: white;
+        }
+      }
+    }
+    .social {
+      margin-top: 3.5rem;
+      @include mobile() {
+        margin-top: 1.5rem;
+      }
+      .columns {
+        width: 50%;
+        @include mobile() {
+          width:100%;
+        }
+        a {
+          @include rounded(50%);
+          background: $brand-color-3;
+          padding: 12px;
+          .fa {
+            vertical-align: middle;
+            color:white;
+            padding-bottom: 3px;
+          }
+          &:hover {
+            background-color: $brand-color-1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.how {
+  background-color: darken($brand-color-3, 10%);
+  position: relative;
+  &:after {
+    @include content-full();
+    background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+    opacity: 0.1;
+    @include box-shadow(1px, 1px, 80px, rgba(0,0,0,1), true);
+  }
+
+  .property {
+    width: 500px;
+    position: relative;
+    background-color: white;
+    @include rounded(5px);
+    @include box-shadow(3px, 3px, 60px, rgba(0,0,0,0.25));
+    .photo {
+      position: relative;
+      background-size:cover;
+      background-repeat: no-repeat;
+      height: 400px;
+      .img-meta {
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width: 100%;
+        @include gradient(rgba(0,0,0,0), rgba(0,0,0,0.75), true);
+        color:white;
+        font-weight: 600;
+        abbr {
+          vertical-align: super;
+          font-size: 85%;
+        }
+        .columns {
+          padding: 1rem;
+        }
+      }
+    }
+    .meta {
+      padding: 1rem;
+    }
+  }
+}

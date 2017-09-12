@@ -1,0 +1,6 @@
+a, .nav-item a:not(.button), a.nav-item:not(.button) {
+  color: $text-color;
+  &:hover {
+    color:rgba(0,0,0,0.5);
+  }
+}

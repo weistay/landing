@@ -89,9 +89,10 @@ var webpackConfig = merge(baseWebpackConfig, {
     // copy custom static assets
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, '../static'),
-        to: config.build.assetsSubDirectory,
-        ignore: ['.*']
+        //from: path.resolve(__dirname, '../static'),
+        //to: config.build.assetsSubDirectory,
+        //ignore: ['.*']
+        from: path.resolve(__dirname, '../src'),
       }
     ]),
     /*
@@ -101,7 +102,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     */
 
     new PrerenderSpaPlugin(
-      path.join(__dirname, 'dist'),
+      path.join(__dirname, '../dist'),
       [ '/']
     )
 
