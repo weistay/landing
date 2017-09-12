@@ -1,25 +1,23 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+// Imports
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueHead from 'vue-head'
 import VueScrollTo from 'vue-scrollto'
-import 'vue-awesome/icons'
-import Icon from 'vue-awesome/components/Icon'
 
-// Require the main Sass manifest file
+// Require styles
+require('font-awesome-sass-loader')
 require('./assets/sass/main.scss')
 
+// Config
 Vue.config.productionTip = false
 Vue.use(VueHead)
 Vue.use(VueScrollTo)
 
-
-/* eslint-disable no-new */
+// Launch
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App, Icon }
+  components: { App }
 })

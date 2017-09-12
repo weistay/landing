@@ -18,7 +18,7 @@
                         <input class="input is-large" type="text" placeholder="@ Subscribe for updates">
                       </div>
                       <div class="control">
-                        <a class="button is-large"><span class="icon"><icon class="fa fa-arrow-right"></icon></span></a>
+                        <a class="button is-large"><span class="icon"><i class="fa fa-arrow-right"></i></span></a>
                       </div>
                       <div class="line-art">
                         <img src="/static/images/landing-line-art.svg" class="line-art-top">
@@ -29,16 +29,16 @@
                   <div class="social">
                     <div class="columns is-mobile">
                       <div class="column">
-                        <a href=""><icon class="fa fa-slack"></icon></a>
+                        <a href=""><i class="fa fa-slack"></i></a>
                       </div>
                       <div class="column">
-                        <a href=""><icon class="fa fa-twitter"></icon></a>
+                        <a href=""><i class="fa fa-twitter"></i></a>
                       </div>
                       <div class="column">
-                        <a href=""><icon class="fa fa-github"></icon></a>
+                        <a href=""><i class="fa fa-github"></i></a>
                       </div>
                       <div class="column">
-                        <a href=""><icon class="fa fa-medium"></icon></a>
+                        <a href=""><i class="fa fa-medium"></i></a>
                       </div>
                     </div>
                   </div>
@@ -76,7 +76,7 @@
             <div class="hero-body">
               <div class="container">
                   <div class="property">
-                    <div class="photo" style="background-image: url('/static/images/properties/long-bay-beach.jpg')">
+                    <div class="photo" style="background-image: url('/static/images/properties/lo')">
                       <div class="img-meta">
                         <div class="columns">
                           <div class="date column is-8">
