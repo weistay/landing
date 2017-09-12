@@ -99,12 +99,12 @@ var webpackConfig = merge(baseWebpackConfig, {
       from: 'src/static'
     }]),
     */
-    /*
+
     new PrerenderSpaPlugin(
       path.join(__dirname, 'dist'),
       [ '/']
     )
-    */
+
   ]
 })
 
