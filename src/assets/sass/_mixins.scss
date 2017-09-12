@@ -1,0 +1,56 @@
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin gradient($from, $to, $vertical: false) {
+  background: $from;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$from}', endColorstr='#{$to}',GradientType=1 );
+  @if $vertical {
+    background: -moz-linear-gradient(top, $from 0%, $to 100%);
+    background: -webkit-linear-gradient(top, $from 0%, $to 100%);
+    background: linear-gradient(to bottom, $from 0%, $to 100%);
+  } @else {
+    background: -moz-linear-gradient(left, $from 0%, $to 100%);
+    background: -webkit-linear-gradient(left, $from 0%, $to 100%);
+    background: linear-gradient(to right, $from 0%, $to 100%);
+  }
+}
+
+@mixin gradient-diagonal($from, $to, $flipped: false) {
+  background: $from;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$from}', endColorstr='#{$to}',GradientType=1 );
+  @if $flipped {
+    background: -moz-linear-gradient(45deg, $from 0%, $to 100%);
+    background: -webkit-linear-gradient(45deg, $from 0%, $to 100%);
+    background: linear-gradient(45deg, $from 0%, $to 100%);
+  } @else {
+    background: -moz-linear-gradient(-45deg, $from 0%, $to 100%);
+    background: -webkit-linear-gradient(-45deg, $from 0%, $to 100%);
+    background: linear-gradient(135deg, $from 0%, $to 100%);
+  }
+}
+
+@mixin content-full() {
+  content: "";
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  width: 100%;
+  height: 100%;
+}

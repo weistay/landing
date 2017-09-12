@@ -3,11 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueHead from 'vue-head'
+import VueScrollTo from 'vue-scrollto'
 
 // Require the main Sass manifest file
 require('./assets/sass/main.scss')
 
-Vue.config.productionTip = true
+Vue.config.productionTip = false
+Vue.use(VueHead)
+Vue.use(VueScrollTo)
+
 
 /* eslint-disable no-new */
 new Vue({
