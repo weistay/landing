@@ -16,10 +16,11 @@
                     <form action="//discoveryholidayhomes.us5.list-manage.com/subscribe/post?u=7905298e52d9ad2579d34f77f&amp;id=693fd2e294" method="post" id="mailchimp" target="_blank" novalidate>
                       <div class="field has-addons">
                         <div class="control">
-                          <input class="input is-large" v-validate="'required|EMAIL'" v-model="EMAIL" name="EMAIL" type="text" placeholder="@ Subscribe for updates">
+                          <input class="input is-large" v-validate="'required|email'" v-model="email" name="email" type="text" placeholder="@ Subscribe for updates">
+                          <input class="hidden" v-bind:value="email" name="EMAIL">
                         </div>
                         <div class="control">
-                          <a :class="{'button is-large is-success': !errors.has('EMAIL'), 'button is-large': errors.has('EMAIL') }" @click="subscribe"><span class="icon"><i class="fa fa-arrow-right"></i></span></a>
+                          <a :class="{'button is-large is-success': !errors.has('email'), 'button is-large': errors.has('email') }" @click="subscribe"><span class="icon"><i class="fa fa-arrow-right"></i></span></a>
                         </div>
                         <div class="line-art">
                           <img src="/static/images/landing-line-art.svg" class="line-art-top">
@@ -307,14 +308,21 @@
     },
     data () {
       return {
-        EMAIL: ''
+        email: ''
       }
+    },
+    mounted: function () {
+      this.$nextTick(function () {
+          this.errors.add('email', 'Please enter your email', 'Email');
+      });
+      //this.errors.update('email', {});
     },
     methods: {
       subscribe: function () {
         console.log(this.errors);
-        if (this.errors.has('EMAIL')) {
-            alert(this.errors.first('EMAIL'));
+        if (this.errors.has('email')) {
+            console.log(this.errors);
+            alert(this.errors.first('email'));
         } else {
             document.getElementById("mailchimp").submit();
         }

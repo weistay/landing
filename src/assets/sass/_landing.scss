@@ -34,14 +34,17 @@
         }
       }
     }
-    .logo {
-      font-family: HipstelveticaBold;
-      color: $brand-color-3;
-      font-size: 2rem;
-      margin-top: 7px;
+    .brand {
       overflow: hidden;
-      span {
-        color: $brand-color-1;
+      .logo {
+        font-family: HipstelveticaBold;
+        color: $brand-color-3;
+        font-size: 2rem;
+        margin-top: 7px;
+        overflow: hidden;
+        span {
+          color: $brand-color-1;
+        }
       }
     }
   }
@@ -180,6 +183,9 @@
           margin-right: 0!important;
           position: relative;
           z-index: 999;
+          .hidden {
+            display: none;
+          }
           &:first-child {
             width: 110%;
           }
