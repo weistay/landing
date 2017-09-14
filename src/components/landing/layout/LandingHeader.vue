@@ -2,7 +2,9 @@
   <nav class="nav" id="top">
     <div class="nav-left">
       <a class="nav-item">
-        <img src="/static/images/logo.svg" alt="Weistay">
+        <span class="logo">
+          WEI<span>STAY</span>
+        </span>
       </a>
     </div>
 
@@ -23,7 +25,7 @@
         FAQ's
       </a>
       <a class="nav-item">
-        Contact
+        Join
       </a>
     </div>
   </nav>

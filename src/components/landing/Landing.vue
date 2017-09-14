@@ -13,18 +13,20 @@
                   <h1 class="title is-2">Travel, live & work with like-minded people around the world</h1>
                   <h2 class="subtitle is-4">A decentralised marketplace for freelancers & digital nomads to book tech meetups with like-minded people around the world.</h2>
                   <div class="action">
-                    <div class="field has-addons">
-                      <div class="control">
-                        <input class="input is-large" type="text" placeholder="@ Subscribe for updates">
+                    <form action="//discoveryholidayhomes.us5.list-manage.com/subscribe/post?u=7905298e52d9ad2579d34f77f&amp;id=693fd2e294" method="post" id="mailchimp" target="_blank" novalidate>
+                      <div class="field has-addons">
+                        <div class="control">
+                          <input class="input is-large" v-validate="'required|EMAIL'" v-model="EMAIL" name="EMAIL" type="text" placeholder="@ Subscribe for updates">
+                        </div>
+                        <div class="control">
+                          <a :class="{'button is-large is-success': !errors.has('EMAIL'), 'button is-large': errors.has('EMAIL') }" @click="subscribe"><span class="icon"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                        <div class="line-art">
+                          <img src="/static/images/landing-line-art.svg" class="line-art-top">
+                          <img src="/static/images/landing-line-art.png" class="line-art-bottom">
+                        </div>
                       </div>
-                      <div class="control">
-                        <a class="button is-large"><span class="icon"><i class="fa fa-arrow-right"></i></span></a>
-                      </div>
-                      <div class="line-art">
-                        <img src="/static/images/landing-line-art.svg" class="line-art-top">
-                        <img src="/static/images/landing-line-art.png" class="line-art-bottom">
-                      </div>
-                    </div>
+                    </form>
                   </div>
                   <div class="social">
                     <div class="columns is-mobile">
@@ -68,11 +70,11 @@
       </div>
     </section>
 
-    <section id="how" class="how is-fullheight">
+    <section class="how is-fullheight">
       <div class="columns">
         <div class="column">
 
-          <section class="hero">
+          <section id="how" class="hero">
             <div class="hero-body">
               <div class="container">
                 <h2 class="section-title title is-2 has-text-centered has-text-white">How it works</h2>
@@ -178,7 +180,7 @@
                       <div class="column line"></div>
                       <div class="column pt-tip">
                         <span class="pt-title">3. Líf tokens</span>
-                        <p>Weistay uses the digital token Líf - <a href="">Learn more about Líf</a></p>
+                        <p>Pay in Líf, a new cryptocurrency - <a href="">Learn more about Líf</a></p>
                       </div>
                     </div>
                   </div>
@@ -219,6 +221,79 @@
         </div>
       </div>
     </section>
+
+    <section class="faqs is-fullheight">
+        <div class="columns is-vcentered">
+          <div class="column left-side is-7">
+            <section id="faqs" class="hero">
+              <div class="hero-body">
+                <div class="nothing">
+                  <div class="columns is-tablet">
+                    <div class="column">
+                      <div class="faq">
+                        <img src="/static/images/network.svg">
+                        <h5 class="title is-5">Why is Weistay "decentralised" and what does this mean?</h5>
+                        <p>Using blockchain technology & smart contracts, Weistay can connect travelers with providers & other travelers directly, without centralised middleman like Airbnb, who take high commissions & guest service fees.</p>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="faq">
+                        <img src="/static/images/network.svg">
+                        <h5 class="title is-5">When will Weistay's alpha be ready?</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare malesuada dolor ut dictum. Pellentesque eget orci nisl. Vivamus sit amet ullamcorper elit. Donec mattis scelerisque dui sed convallis.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="columns is-tablet">
+                    <div class="column">
+                      <div class="faq">
+                        <img src="/static/images/network.svg">
+                        <h5 class="title is-5">What are Líf tokens and Winding Tree?</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare malesuada dolor ut dictum. Pellentesque eget orci nisl. Vivamus sit amet ullamcorper elit. Donec mattis scelerisque dui sed convallis.</p>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="faq">
+                        <img src="/static/images/network.svg">
+                        <h5 class="title is-5">When will Weistay's alpha be ready?</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare malesuada dolor ut dictum. Pellentesque eget orci nisl. Vivamus sit amet ullamcorper elit. Donec mattis scelerisque dui sed convallis.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="columns is-tablet">
+                    <div class="column">
+                      <div class="faq">
+                        <img src="/static/images/network.svg">
+                        <h5 class="title is-5">What are Líf tokens and Winding Tree?</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare malesuada dolor ut dictum. Pellentesque eget orci nisl. Vivamus sit amet ullamcorper elit. Donec mattis scelerisque dui sed convallis.</p>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="faq">
+                        <img src="/static/images/network.svg">
+                        <h5 class="title is-5">When will Weistay's alpha be ready?</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare malesuada dolor ut dictum. Pellentesque eget orci nisl. Vivamus sit amet ullamcorper elit. Donec mattis scelerisque dui sed convallis.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="column right-side is-5">
+            <h2 class="section-title title is-2">FAQ's</h2>
+            <div class="overlay"></div>
+            <section class="hero is-fullheight is-default">
+              <div class="hero-body has-text-centered">
+                <div class="hero-inner">
+                  <img src="/static/images/thinking.svg">
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+    </section>
+
   </div>
 </template>
 
@@ -232,7 +307,17 @@
     },
     data () {
       return {
-        msg: 'weistay'
+        EMAIL: ''
+      }
+    },
+    methods: {
+      subscribe: function () {
+        console.log(this.errors);
+        if (this.errors.has('EMAIL')) {
+            alert(this.errors.first('EMAIL'));
+        } else {
+            document.getElementById("mailchimp").submit();
+        }
       }
     }
   }

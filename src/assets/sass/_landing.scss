@@ -34,12 +34,22 @@
         }
       }
     }
+    .logo {
+      font-family: HipstelveticaBold;
+      color: $brand-color-3;
+      font-size: 2rem;
+      margin-top: 7px;
+      span {
+        color: $brand-color-1;
+      }
+    }
   }
 
   .right-side {
     position: relative;
     margin: 0;
     padding: 0;
+    border-left:3px solid $brand-color-3;
 
     @include gradient-diagonal($background-light, darken($background-light, 10%)); //#38dbd1
 
@@ -48,16 +58,10 @@
     }
 
     .overlay {
-      position: absolute;
-      top:0;
-      left:0;
-      right:0;
-      bottom:0;
-      width: 100%;
+      @include overlay-base();
       z-index: 4;
       opacity: 0.25;
-      pointer-events: none;
-      background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
+      background-image: url("/static/images/backgrounds/crissxcross.png");
     }
 
     .wt {
@@ -173,9 +177,15 @@
 
         .control {
           margin-right: 0!important;
+          position: relative;
+          z-index: 999;
           &:first-child {
             width: 110%;
           }
+        }
+
+        .button.is-success {
+          background-color: $brand-color-2!important;
         }
 
         &:after {
@@ -300,7 +310,7 @@
   z-index: 9;
   &:after {
     @include content-full();
-    background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+    background-image: url("/static/images/backgrounds/diamond-upholstery.png");
     opacity: 0.1;
     pointer-events: none;
     @include box-shadow(1px, 1px, 80px, rgba(0,0,0,1), true);
@@ -493,6 +503,69 @@
       //right: -250px;
       top: 634px;
       width: 249px;
+    }
+  }
+}
+
+.faqs {
+  position: relative;
+  > .columns {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .overlay {
+    @include overlay-base();
+    z-index: 4;
+    opacity: 1;
+    //background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+    background-image: url('/static/images/backgrounds/cubes.png');
+  }
+  .section-title {
+    color:rgba(0,0,0,0.06);
+    position: absolute;
+    transform: rotate(-5deg);
+    font-size: 15vw;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .right-side {
+    background-color: whitesmoke;
+    position: relative;
+    border-left:3px solid $brand-color-3;
+    .hero-inner {
+      position: relative;
+      z-index: 5;
+      text-align: center;
+      width: 100%;
+      img {
+        width: 240px;
+      }
+    }
+  }
+  .left-side {
+    position: relative;
+    .hero-body {
+      padding: 4rem 2.75rem 1rem 2.75rem;
+
+      .columns {
+        margin-bottom: 2rem;
+      }
+
+      .title {
+        margin-bottom: 3rem;
+      }
+
+      .faq {
+        h5 {
+          margin-bottom: 1rem;
+        }
+        img {
+          height: 64px;
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 }

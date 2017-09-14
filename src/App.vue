@@ -14,6 +14,7 @@
         complement: 'Decentralised accommodation for digital nomads'
       },
       meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1'},
         { name: 'description', content: 'A decentralised marketplace for freelancers & digital nomads to book tech meetups with like-minded people around the world.', id: 'desc' },
 
         // Twitter
