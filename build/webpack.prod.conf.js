@@ -97,7 +97,14 @@ var webpackConfig = merge(baseWebpackConfig, {
 
     new PrerenderSpaPlugin(
       path.join(__dirname, '../dist'),
-      [ '/']
+      [ '/' ],
+      {
+        postProcessHtml: function (context) {
+          return context.html.replace(
+            /http:\/\/localhost:8000/gi, ''
+          )
+        }
+      }
     )
 
   ]
