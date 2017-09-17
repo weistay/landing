@@ -11,7 +11,7 @@
               <div class="container">
                 <div class="column is-full-desktop">
                   <h1 class="title is-2">Travel, live & work with like-minded people around the world</h1>
-                  <h2 class="subtitle is-4">A decentralised marketplace for freelancers & digital nomads to book tech meetups with like-minded people around the world.</h2>
+                  <h2 class="subtitle is-4">A decentralised home rental marketplace for freelancers & digital nomads to book tech meetups with like-minded people around the world.</h2>
                   <div class="action">
                     <form action="//discoveryholidayhomes.us5.list-manage.com/subscribe/post?u=7905298e52d9ad2579d34f77f&amp;id=693fd2e294" method="post" id="mailchimp" target="_blank" novalidate>
                       <div class="field has-addons">
@@ -75,10 +75,10 @@
       <div class="columns">
         <div class="column">
 
-          <section id="how" class="hero">
+          <section class="hero">
             <div class="hero-body">
               <div class="container">
-                <h2 class="section-title title is-2 has-text-centered has-text-white">How it works</h2>
+                <h2 class="section-title title is-2 has-text-centered has-text-white" id="how">How it works</h2>
                 <div class="property-wrap">
                   <!-- Property -->
                   <div class="property">
@@ -86,7 +86,7 @@
                       <div class="img-meta">
                         <div class="columns is-mobile">
                           <div class="date column is-8">
-                            1 Mar - 7 Mar 18
+                            1 Mar - 28 Mar 18
                           </div>
                           <div class="price column has-text-right is-4">
                             20 <abbr>Líf</abbr> <span>/ <abbr>$</abbr>600</span>
@@ -170,7 +170,7 @@
                     <div class="columns is-vcentered">
                       <div class="column pt-tip">
                         <span class="pt-title">2. Start & end dates</span>
-                        <p>Checkin & checkout date for this meetup</p>
+                        <p>See the checkin & checkout date for this meetup</p>
                       </div>
                       <div class="column line"></div>
                     </div>
@@ -232,32 +232,18 @@
                   <div class="columns is-tablet">
                     <div class="column">
                       <div class="faq">
-                        <img src="/static/images/network.svg">
-                        <h5 class="title is-5">Why is Weistay "decentralised" and what does this mean?</h5>
-                        <p>Using blockchain technology & smart contracts, Weistay can connect travelers with providers & other travelers directly, without centralised middleman like Airbnb, who take high commissions & guest service fees.</p>
+                        <img src="/static/images/who.svg">
+                        <h5 class="title is-5">Who is Weistay for?</h5>
+                        <p>Weistay is for anyone who loves to work, travel and meet like-minded people.</p>
+                        <p>This may include other freelancers, remote workers, entrepreneurs, developers, writers, designers, digital nomads, social media managers, artists, musicians, data scientists, growth hackers and much more. </p>
                       </div>
                     </div>
                     <div class="column">
                       <div class="faq">
-                        <img src="/static/images/network.svg">
-                        <h5 class="title is-5">When will Weistay's alpha be ready?</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare malesuada dolor ut dictum. Pellentesque eget orci nisl. Vivamus sit amet ullamcorper elit. Donec mattis scelerisque dui sed convallis.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="columns is-tablet">
-                    <div class="column">
-                      <div class="faq">
-                        <img src="/static/images/network.svg">
-                        <h5 class="title is-5">What are Líf tokens and Winding Tree?</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare malesuada dolor ut dictum. Pellentesque eget orci nisl. Vivamus sit amet ullamcorper elit. Donec mattis scelerisque dui sed convallis.</p>
-                      </div>
-                    </div>
-                    <div class="column">
-                      <div class="faq">
-                        <img src="/static/images/network.svg">
-                        <h5 class="title is-5">When will Weistay's alpha be ready?</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare malesuada dolor ut dictum. Pellentesque eget orci nisl. Vivamus sit amet ullamcorper elit. Donec mattis scelerisque dui sed convallis.</p>
+                        <img src="/static/images/solution.svg">
+                        <h5 class="title is-5">What problem does Weistay solve?</h5>
+                        <p>Weistay solves the problem of freelancers & remote workers feeling isolated with a lack entrepreneurial spirit, a sense of community and a group of like-minded people they can meet, bounce ideas off and learn from.</p>
+                        <p>Weistay also makes expensive self-catering accommodation for individuals & small groups cheaper through group renting.</p>
                       </div>
                     </div>
                   </div>
@@ -265,15 +251,36 @@
                     <div class="column">
                       <div class="faq">
                         <img src="/static/images/network.svg">
-                        <h5 class="title is-5">What are Líf tokens and Winding Tree?</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare malesuada dolor ut dictum. Pellentesque eget orci nisl. Vivamus sit amet ullamcorper elit. Donec mattis scelerisque dui sed convallis.</p>
+                        <h5 class="title is-5">Why is Weistay decentralised & open source?</h5>
+                        <p>Using blockchain technology & smart contracts, Weistay can connect travelers with accommodation providers & other travelers directly, without centralised middleman like Airbnb, who take high commissions (up to %20) & guest service fees (up to 12%).</p>
+                        <p>Weistay is open source to enable & encourage its own users to help build the platform and take it in a direction that suits everybody.</p>
                       </div>
                     </div>
                     <div class="column">
                       <div class="faq">
-                        <img src="/static/images/network.svg">
+                        <img src="/static/images/travel.svg">
+                        <h5 class="title is-5">How do I get involved?</h5>
+                        <p>If you're a traveler interested in using Weistay, please subscribe for updates to our first release.</p>
+                        <p>If you're a property owner looking to make some extra money by renting your space to freelancers & remote workers, please send us an <a href="mailto:danny@rentivo.com">email</a>.
+                        <p>If you're a developer/contributor, please check out our <a href="https://github.com/weistay">Github</a>.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="columns is-tablet">
+                    <div class="column">
+                      <div class="faq">
+                        <img src="/static/images/lif.svg">
+                        <h5 class="title is-5">What are Líf tokens?</h5>
+                        <p>In a nutshell, Líf tokens are an ERC20 digital token issued by Winding Tree, who are a platform to connect suppliers & sellers in a single marketplace and build travel applications on. It's essentially a set of smart contracts on Ethereum with a DAO governance platform that allows for the holders of Líf to participate in the development of those contracts.</p>
+                        <p>Weistay uses Líf tokens as a form of payment between travelers and accommodation providers.</p>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="faq">
+                        <img src="/static/images/alpha.svg">
                         <h5 class="title is-5">When will Weistay's alpha be ready?</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare malesuada dolor ut dictum. Pellentesque eget orci nisl. Vivamus sit amet ullamcorper elit. Donec mattis scelerisque dui sed convallis.</p>
+                        <p>We're aiming for the 1st of November, 2017. Subscribe for updates for more information.</p>
+                        <p>If you're interested in joining the project, please visit our <a href="https://github.com/weistay">Github</a>.</p>
                       </div>
                     </div>
                   </div>
@@ -281,7 +288,7 @@
               </div>
             </section>
           </div>
-          <div class="column right-side is-5">
+          <div class="column right-side">
             <h2 class="section-title title is-2">FAQ's</h2>
             <div class="overlay"></div>
             <section class="hero is-fullheight is-default">
@@ -294,6 +301,57 @@
           </div>
         </div>
     </section>
+
+
+    <section class="footer is-fullheight">
+      <div class="overlay"></div>
+      <div class="col-wrap">
+        <div class="columns is-desktop" id="join">
+          <div class="column">
+            <div class="box box-one">
+              <h2 class="section-title title is-4">Join the community</h2>
+              <p>Are you looking for more entrepreneurial spirit, a sense of community and a group of like-minded people to meet, bounce ideas off and learn from? Do you like to travel?</p>
+              <p>Join our growing community to learn more about our plans, share your feedback & feature requests.</p>
+              <div class="social">
+                <div class="columns is-mobile">
+                  <div class="column">
+                    <a href=""><i class="fa fa-slack"></i></a>
+                  </div>
+                  <div class="column">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                  </div>
+                  <div class="column">
+                    <a href=""><i class="fa fa-github"></i></a>
+                  </div>
+                  <div class="column">
+                    <a href=""><i class="fa fa-medium"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box box-two">
+              <h2 class="section-title title is-4">Contribute on Github</h2>
+              <p>Weistay is open source! We encourage members from the freelancing community who love to work, travel and use this decentralised service to help build the application, add useful features and take it in the direction most suited to its users.</p>
+              <p><a href="https://www.github.com/weistay" class="button is-primary"><i class="fa fa-github"></i> View on Github</a></p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box box-three">
+              <h2 class="section-title title is-4">List your home rental</h2>
+              <p>Do you have a medium to large home rental you'd to make more out of season bookings in? Are you interested in cryptocurrencies and their future potential?</p>
+              <p>Weistay is totally decentralised and autonomous, meaning less fees & more control over your business!</p>
+              <p><a href="mailto:danny@rentivo.com" class="button is-info"><i class="fa fa-home"></i> Find out more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="end-text">
+        Made with ❤️ by <a href="https://www.rentivo.com">Rentivo</a>
+      </div>
+    </section>
+
 
   </div>
 </template>
@@ -315,13 +373,10 @@
       this.$nextTick(function () {
           this.errors.add('email', 'Please enter your email', 'Email');
       });
-      //this.errors.update('email', {});
     },
     methods: {
       subscribe: function () {
-        console.log(this.errors);
         if (this.errors.has('email')) {
-            console.log(this.errors);
             alert(this.errors.first('email'));
         } else {
             document.getElementById("mailchimp").submit();

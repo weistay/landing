@@ -15,16 +15,13 @@
     </span>
 
     <div class="nav-right nav-menu">
-      <a class="nav-item">
-        Home
-      </a>
       <a v-scroll-to="'#how'" class="nav-item">
         How it works
       </a>
-      <a class="nav-item">
+      <a v-scroll-to="'#faqs'" class="nav-item">
         FAQ's
       </a>
-      <a class="nav-item">
+      <a v-scroll-to="'#join'" class="nav-item">
         Join
       </a>
     </div>

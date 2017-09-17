@@ -1,6 +1,12 @@
 .landing {
   position: relative;
   z-index: 10;
+  a, .nav-item a:not(.button), a.nav-item:not(.button) {
+    color: $text-color;
+    &:hover {
+      color:rgba(0,0,0,0.5);
+    }
+  }
   .nav {
     padding: 0 2.5rem 0 3.25rem;
     width: 100%;
@@ -53,7 +59,6 @@
     position: relative;
     margin: 0;
     padding: 0;
-    border-left:3px solid $brand-color-3;
 
     @include gradient-diagonal($background-light, darken($background-light, 10%)); //#38dbd1
 
@@ -124,6 +129,7 @@
 
     @include mobile() {
       width: 100%;
+      overflow: hidden;
     }
 
     .hero-body {
@@ -203,12 +209,14 @@
           background-color: $brand-color-3;
           top: 50%;
           left: -300px;
+          /*
           @include mobile() {
             width: 2000px;
           }
           @include tablet-only {
             width: 2000px;
           }
+          */
         }
       }
 
@@ -286,25 +294,6 @@
         width: 50%;
         @include mobile() {
           width:100%;
-        }
-        a {
-          text-align: center;
-          float: left;
-          width: 50px;
-          height: 50px;
-          border: 3px solid $brand-color-3;
-          @include rounded(100%);
-          .fa {
-            font-size: 20px;
-            line-height: 45.5px;
-            color: $brand-color-3;
-          }
-          &:hover {
-            background-color: $brand-color-3;
-            .fa {
-              color: white;
-            }
-          }
         }
       }
     }
@@ -488,7 +477,7 @@
     }
     .pt-2 {
       //left: -250px;
-      top: 330px;
+      top: 317px;
       width: 246px;
     }
     .pt-3 {
@@ -524,7 +513,6 @@
     @include overlay-base();
     z-index: 4;
     opacity: 1;
-    //background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
     background-image: url('/static/images/backgrounds/cubes.png');
   }
   .section-title {
@@ -532,29 +520,63 @@
     position: absolute;
     transform: rotate(-5deg);
     font-size: 15vw;
-    top: 15%;
+    top: 20%;
     left: 0;
     width: 100%;
     text-align: center;
+    @include tablet-only() {
+      display: none;
+    }
+
+    @include mobile() {
+      display: none;
+    }
   }
   .right-side {
+
+    @include mobile() {
+      display: none;
+    }
+
     background-color: whitesmoke;
     position: relative;
-    border-left:3px solid $brand-color-3;
-    .hero-inner {
-      position: relative;
-      z-index: 5;
-      text-align: center;
-      width: 100%;
-      img {
-        width: 240px;
+
+    .hero.is-fullheight {
+      height: 100%;
+      .hero-inner {
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        width: 100%;
+        img {
+          width: 240px;
+        }
       }
     }
   }
   .left-side {
     position: relative;
+    @include fullhd() {
+      width: 59%;
+    }
+
+    @include widescreen-only() {
+      width: 59%;
+    }
+
+    @include desktop-only() {
+      width: 59%;
+    }
+
+    @include tablet-only() {
+      width: 80%;
+    }
+
+    @include mobile() {
+      width: 100%;
+    }
     .hero-body {
-      padding: 4rem 2.75rem 1rem 2.75rem;
+      padding: 4rem 2rem 1rem 3rem;
 
       .columns {
         margin-bottom: 2rem;
@@ -572,7 +594,148 @@
           height: 64px;
           margin-bottom: 1rem;
         }
+        p {
+          margin-bottom: 1rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
+    }
+  }
+}
+
+.footer {
+  @include gradient-diagonal($background-light, darken($background-light, 10%)); //#38dbd1
+
+  padding: 2rem;
+  min-height: 720px;
+  position: relative;
+  box-shadow: inset 0 10px 50px rgba(16,142,147,0.3);
+
+  @include until($desktop) {
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .overlay {
+    @include overlay-base();
+    z-index: 4;
+    opacity: 0.25;
+    background-image: url("/static/images/backgrounds/crissxcross.png");
+  }
+
+  .col-wrap {
+    position: absolute;
+    top:50%;
+    left:0;
+    width: 100%;
+    margin-top: -178px;
+    padding: 0 2rem;
+    z-index: 5;
+    @include until($desktop) {
+      position: relative;
+      top:auto;
+      margin-top: 0;
+      padding: 0;
+    }
+    > .columns {
+      > .column {
+        padding: 2rem;
+        @include mobile() {
+          padding: 2rem 1rem;
+        }
+        @include desktop-only() {
+          padding: 2rem 1rem;
+        }
+        .box {
+          @include animation();
+          position: relative;
+          border-radius: 0;
+          z-index: 5;
+          @include box-shadow(0, 15px, 20px, rgba(10, 10, 10, 0.1));
+          border: 3px solid $brand-color-3;
+          .title {
+            color:$brand-color-3;
+          }
+          p {
+            margin-bottom: 1rem;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          &:hover {
+            margin-top: -15px;
+            @include box-shadow(0, 45px, 20px, rgba(10, 10, 10, 0.1));
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            top:20%;
+            height:3px;
+            background-color: $brand-color-3;
+            width: 150px;
+            left: -150px;
+            z-index: -1;
+          }
+          .social {
+            margin-top: 1rem;
+            text-align: center;
+            a {
+              border: 3px solid $brand-color-2;
+              .fa {
+                color: $brand-color-2;
+              }
+              &:hover {
+                background-color: $brand-color-2;
+                .fa {
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+        .box-one {
+          z-index: 10;
+        }
+        .box-two {
+          z-index: 8;
+        }
+        .box-three {
+          z-index: 7;
+          &:before {
+            content: "";
+            position: absolute;
+            top:20%;
+            height:3px;
+            background-color: $brand-color-3;
+            width: 150px;
+            right: -150px;
+            z-index: -1;
+            @include until($desktop) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .end-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: $brand-color-3;
+    padding: 3rem 2rem;
+    @include until($desktop) {
+      position: relative;
+      bottom:auto;
+    }
+    a {
+      color: $brand-color-3;
+      //background-color: rgba(255, 255, 255, 0.3);
+      padding: 3px;
+      border-bottom: 3px solid $brand-color-3;
     }
   }
 }
