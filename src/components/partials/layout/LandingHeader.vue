@@ -15,6 +15,9 @@
     </span>
 
     <div class="nav-right nav-menu">
+      <!--<router-link to="rentals" class="nav-item">
+        <strong>Alpha Marketplace</strong>
+      </router-link>-->
       <a v-scroll-to="'#how'" class="nav-item">
         How it works
       </a>
